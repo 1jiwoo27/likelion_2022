@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div clas="alert-box" id="alert">
+        <p id="title">Alert 박스</p>
+        <button id="close">X</button>
+    </div>
+
+    <button onclick="알림창1열기('아이디입력해라')">버튼1</button>
+    <button onclick="알림창1열기('비번입력해라')">버튼2</button>
+
+    <script>
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display='none';
+        });
+
+        function 알림창1열기(구멍){
+            document.getElementById('title').innerHTML=구멍;
+            document.getElementById('alert').style.display='block';
+        }
+
+        function 알림창열기(구멍){
+            document.getElementById('alert').style.display=구멍;
+        }
+    </script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
