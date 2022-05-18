@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>클릭한 곳의 좌표를 알려줄게요</p>
+    <p class="msg">Where?</p>
+    <script>
+        const msg = document.querySelector(".msg");
+
+        function showWhere(e) {
+            msg.innerHTML = `my location is ${e.clientX},${e.clientY}`
+        }
+        document.onclick = showWhere;
+    </script>
+</body>
+
+</html>

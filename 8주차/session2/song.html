@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .blue {
+            width: 0px;
+            height: 5px;
+            background-color: rgb(92, 100, 254);
+        }
+        
+        .lyrics {
+            width: 250px;
+            height: 150px;
+            overflow-y: scroll;
+            background-color: rgb(92, 100, 254);
+        }
+    </style>
+    <div class="blue"></div>
+    <div class="lyrics">
+        <p>
+            그건 사랑이 아냐
+            그건 미련이 아냐
+            그냥 정리하고 가자
+            아메리카노보단 라떼를
+            맛있게 내리던 네 집 앞 카페를
+            매일 같이 갔었었던 그때를
+            내려줄게 쓰지 않아 이제는
+            넌 매일 밤 예뻐 예뻐
+            해주며 날 재워 재워
+            식어버린 널 데워 태워
+            꿈에서 날 깨워 줘
+            버려진 기억들 속에서
+            쓸만한 컷들을 찾고 있어
+            이미 내 곁에 더는 없는 너지만
+            난 너를 느낄 수 있어
+            닿을 듯 안 닿을 듯
+            떠나는 뒷모습이
+            왜인지 행복해 보여
+            너라도 행복해줘
+        </p>
+    </div>
+    <script>
+        let bar = document.querySelector('.blue');
+        let lyric = document.querySelector(".lyrics");
+
+        lyric.addEventListener("scroll", function() {
+            let scrollTop = lyric.scrollTop;
+            let scrollHeight = lyric.scrollHeight = lyric.clientHeight;
+            let per = scrollTop / scrollHeigth;
+            bar.style.width = `${per*250}px`;
+        });
+    </script>
+
+</body>
+
+</html>
