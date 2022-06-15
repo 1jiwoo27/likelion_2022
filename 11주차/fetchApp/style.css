@@ -1,0 +1,46 @@
+ul,
+li {
+    list-style: none;
+}
+
+html {
+    background-color: black;
+    color: aliceblue;
+    box-sizing: content-box;
+}
+
+h1 {
+    color: red;
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h4 {
+    margin: 5px;
+    font-size: 20px;
+}
+
+body {
+    padding: 0px 20px;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+img {
+    width: 300px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
